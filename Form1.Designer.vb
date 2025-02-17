@@ -28,6 +28,8 @@ Partial Class Form1
         decimalBtn = New Button()
         Panel26 = New Panel()
         Panel19 = New Panel()
+        equationTxtBox = New TextBox()
+        clickedValueTxtBox = New TextBox()
         equalBtn = New Button()
         Panel18 = New Panel()
         zeroBtn = New Button()
@@ -68,8 +70,6 @@ Partial Class Form1
         Panel22 = New Panel()
         Panel23 = New Panel()
         Panel24 = New Panel()
-        Label1 = New Label()
-        Label2 = New Label()
         Panel1.SuspendLayout()
         Panel19.SuspendLayout()
         SuspendLayout()
@@ -160,12 +160,33 @@ Partial Class Form1
         ' Panel19
         ' 
         Panel19.BackColor = Color.White
-        Panel19.Controls.Add(Label2)
-        Panel19.Controls.Add(Label1)
+        Panel19.Controls.Add(equationTxtBox)
+        Panel19.Controls.Add(clickedValueTxtBox)
         Panel19.Location = New Point(36, 27)
         Panel19.Name = "Panel19"
         Panel19.Size = New Size(323, 82)
         Panel19.TabIndex = 30
+        ' 
+        ' equationTxtBox
+        ' 
+        equationTxtBox.BorderStyle = BorderStyle.None
+        equationTxtBox.Font = New Font("Cascadia Code", 9.75F, FontStyle.Bold)
+        equationTxtBox.Location = New Point(15, 11)
+        equationTxtBox.Name = "equationTxtBox"
+        equationTxtBox.Size = New Size(292, 16)
+        equationTxtBox.TabIndex = 34
+        equationTxtBox.TextAlign = HorizontalAlignment.Right
+        equationTxtBox.WordWrap = False
+        ' 
+        ' clickedValueTxtBox
+        ' 
+        clickedValueTxtBox.BorderStyle = BorderStyle.None
+        clickedValueTxtBox.Font = New Font("Cascadia Code", 18F, FontStyle.Bold)
+        clickedValueTxtBox.Location = New Point(15, 40)
+        clickedValueTxtBox.Name = "clickedValueTxtBox"
+        clickedValueTxtBox.Size = New Size(292, 28)
+        clickedValueTxtBox.TabIndex = 33
+        clickedValueTxtBox.TextAlign = HorizontalAlignment.Right
         ' 
         ' equalBtn
         ' 
@@ -590,31 +611,6 @@ Partial Class Form1
         Panel24.Size = New Size(93, 5)
         Panel24.TabIndex = 4
         ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Cascadia Code", 18F, FontStyle.Bold)
-        Label1.Location = New Point(177, 34)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(126, 32)
-        Label1.TabIndex = 0
-        Label1.Text = "EnterNum"
-        Label1.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Cascadia Code", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = SystemColors.ControlDarkDark
-        Label2.Location = New Point(199, 17)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(104, 17)
-        Label2.TabIndex = 1
-        Label2.Text = "Equation 1+1"
-        Label2.TextAlign = ContentAlignment.MiddleRight
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -682,7 +678,7 @@ Partial Class Form1
     Friend WithEvents Panel25 As Panel
     Friend WithEvents decimalBtn As Button
     Friend WithEvents Panel26 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents equationTxtBox As TextBox
+    Friend WithEvents clickedValueTxtBox As TextBox
 
 End Class
